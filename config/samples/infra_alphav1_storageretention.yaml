@@ -1,0 +1,11 @@
+apiVersion: infra.colinbruner.com/alphav1
+kind: StorageRetention
+metadata:
+  labels:
+    app.kubernetes.io/name: gcs-storage-controller
+    app.kubernetes.io/managed-by: kustomize
+  name: storageretention-sample
+spec:
+  prefix: "sample/prefix/path/"
+  format: "YYYY-MM-DD"
+  retention: "31d"
